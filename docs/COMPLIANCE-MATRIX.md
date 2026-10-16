@@ -2,13 +2,28 @@
 
 Status legend: PASS · FAIL · BLOCKED · NOT VERIFIED · NOT APPLICABLE · TODO
 
-_Last updated: 2026-10-16 (release-candidate v0.2.0, post Northline→Open Frame migration + production hardening)_
+_Last updated: 2026-10-17 (release-candidate v0.5.0 — float-containment fix, WPCS-clean, GitHub published)_
+
+## v0.5.0 audit results
+| Item | Status | Evidence |
+|---|---|---|
+| Clearing Floats defect | PASS | Root cause: `.entry-content` did not contain floats, so a trailing floated thumbnail protruded 45px below the card and `wp_link_pages` wrapped beside it. Fix: `display:flow-root` on `.entry-content`/`.entry-summary`/`.page-content`/`.comment-content` + `clear:both` on `.page-links`. Browser-verified desktop+mobile: float contained (−97px inside card), page-links cleared below, overflow 0; `alignfull` still full-bleed (no regression). |
+| Image Alignment page | PASS | 11 images, none protrude the card, large 1200px images constrained to content width (1160), comments clear below, overflow 0 (desktop + mobile). |
+| WPCS (WordPress + Extra) | PASS | 0 errors / 0 warnings (post `phpcbf`). |
+| Theme Check (v0.5.0) | PASS | REQUIRED 0, WARNING 0, RECOMMENDED 1 (`custom-header`, intentional), INFO 1. |
+| Security/privacy scan | PASS | No `wp_remote_*`/curl/fsockopen/`file_get_contents(url)`; no `eval`/`base64_decode`/exec; no Google Fonts/CDN; no tracking. |
+| Bundled-asset licensing | PASS | Only binary is original `screenshot.png` (1200×900); no third-party fonts/images/videos shipped. All code GPL-2.0. |
+| Standalone ZIP install | PASS | Extracted under a scratch slug → `wp_get_theme()->errors()` empty; works with all plugins deactivated. |
+| GitHub publication | PASS | Public repo https://github.com/Mostafijemon24/open-frame-theme, branch `main`, tag `v0.5.0`; secret scan clean; no `.git`/secrets/zip tracked. |
+| Envato technical requirements | PASS (technical) | Theme Check clean, no-plugin operation, security, Gutenberg/theme.json, prefixing, licensing. Business/packaging items (full HTML end-user docs, listing/preview asset licensing) depend on final Envato product configuration. |
+
 
 ## Release gates (must clear before declaring a final release)
 | Gate | Status | How to clear |
 |---|---|---|
-| WordPress.org name/slug availability (`Open Frame` / `open-frame`) | NOT VERIFIED | No network in this environment. Check the WP.org Themes directory and trac for an existing `open-frame` slug from an internet-capable machine before submitting. |
-| PHPCS / WPCS coding standards | NOT VERIFIED | Run `phpcs` with WPCS + PHPCompatibilityWP using the prepared ruleset (kept OUTSIDE the theme at `releases/open-frame-phpcs.xml.dist`, since dev config must not ship in the theme) in a WPCS-equipped environment; record results here. |
+| WordPress.org name/slug availability (`Open Frame` / `open-frame`) | PASS (available) | WP.org themes info API returns `{"error":"Theme not found"}` (HTTP 404) for `request[slug]=open-frame`, while a known slug (`twentytwentyfour`) returns HTTP 200 — so `open-frame` is not currently registered in the directory. Re-confirm at submission time. |
+| PHPCS / WPCS coding standards | PASS | PHPCS 3.11.3 + WPCS (WordPress/-Extra/-Docs) run against the whole theme: **0 errors, 0 warnings** after auto-fixing 78 cosmetic alignment/formatting items with `phpcbf`. Security, escaping, sanitization, i18n, text-domain and prefixing sniffs were clean before the fixes. |
+| PHP 7.4+ compatibility (PHPCompatibilityWP) | NOT VERIFIED (tooling) / PASS (manual) | PHPCompatibility 9.3.5 has a sniff-autoload clash with the sandbox phpcs phar. Manual evidence: `php -l` clean on PHP 8.5; no PHP 8-only constructs (no arrow fns, `match`, nullsafe, typed properties, promotion, enums, attributes, PHP8 string fns); `Requires PHP: 7.4`. |
 
 ### Running WPCS (prepared, not yet executed here)
 The ruleset lives at `releases/open-frame-phpcs.xml.dist` (deliberately not inside the theme — Theme Check forbids dev config in a production theme). From the WordPress root:
