@@ -1,0 +1,72 @@
+/*
+ * Block editor styles — keep the editing surface visually aligned with the
+ * frontend design system. Mirrors the core tokens from style.css :root.
+ */
+:root {
+	--of-color-primary: #3f4cd6;
+	--of-color-primary-hover: #2b36b8;
+	--of-color-heading: #0f172a;
+	--of-color-text: #0f172a;
+	--of-color-link: #3f4cd6;
+	--of-font-body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", roboto, helvetica, arial, sans-serif;
+	--of-font-heading: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", roboto, helvetica, arial, sans-serif;
+}
+
+.editor-styles-wrapper {
+	font-family: var(--of-font-body);
+	color: var(--of-color-text);
+	line-height: 1.6;
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+	font-family: var(--of-font-heading);
+	color: var(--of-color-heading);
+	letter-spacing: -0.01em;
+}
+
+.editor-styles-wrapper a { color: var(--of-color-link); }
+
+.editor-styles-wrapper .wp-block-button__link {
+	background-color: var(--of-color-primary);
+	border-radius: 10px;
+}
+
+.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link {
+	background: transparent;
+	color: var(--of-color-primary);
+	border: 1.5px solid var(--of-color-primary);
+}
+
+.editor-styles-wrapper .wp-block-quote {
+	border-inline-start: 4px solid var(--of-color-primary);
+	padding-inline-start: 1rem;
+}
+
+.editor-styles-wrapper .wp-block-pullquote {
+	border-top: 2px solid #e2e8f0;
+	border-bottom: 2px solid #e2e8f0;
+	text-align: center;
+}
+
+.editor-styles-wrapper .wp-block-code,
+.editor-styles-wrapper .wp-block-preformatted {
+	background: #0f172a;
+	color: #f1f5f9;
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+.editor-styles-wrapper .wp-block-separator {
+	border-top: 1px solid #e2e8f0;
+	max-width: 6rem;
+}
+.editor-styles-wrapper .wp-block-separator.is-style-wide { max-width: 100%; }
+
+.editor-styles-wrapper table th { background: #f1f5f9; }
+.editor-styles-wrapper table th,
+.editor-styles-wrapper table td { border: 1px solid #e2e8f0; padding: 0.75rem; }

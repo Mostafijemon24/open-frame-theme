@@ -1,0 +1,479 @@
+# Copyright (C) 2026 Mostafij Emon
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Frame 0.2.0\n"
+"Report-Msgid-Bugs-To: https://mostafijemon.live/\n"
+"POT-Creation-Date: 2026-10-16 16:47+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Mostafij Emon\n"
+"X-Domain: open-frame\n"
+
+#: inc/template-tags.php:77
+msgid "% Comments"
+msgstr ""
+
+#: inc/template-tags.php:96 inc/template-tags.php:105
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:76
+msgid "1 Comment"
+msgstr ""
+
+#: inc/footer-builder.php:60
+msgid "1 column"
+msgstr ""
+
+#: inc/footer-builder.php:61
+msgid "2 columns"
+msgstr ""
+
+#: inc/footer-builder.php:62
+msgid "3 columns"
+msgstr ""
+
+#: inc/footer-builder.php:63
+msgid "4 columns"
+msgstr ""
+
+#: inc/blocks.php:73
+msgid "A clean, accessible multipurpose theme with a token-driven design system."
+msgstr ""
+
+#: inc/customizer/customizer.php:283
+msgid "Accent"
+msgstr ""
+
+#: inc/header-builder.php:141
+msgid "Add a menu"
+msgstr ""
+
+#: inc/footer-builder.php:187
+msgid "All rights reserved."
+msgstr ""
+
+#: inc/setup.php:103
+msgid "Appears on posts and pages that use a sidebar layout."
+msgstr ""
+
+#: inc/setup.php:111
+msgid "Appears on the blog index and archives."
+msgstr ""
+
+#: inc/customizer/customizer.php:206
+msgid "Applies when the blog listing style is Grid."
+msgstr ""
+
+#: inc/customizer/customizer.php:351
+msgid "Base font size (px)"
+msgstr ""
+
+#: inc/customizer/customizer.php:246
+msgid "Blog / archive layout"
+msgstr ""
+
+#: inc/setup.php:109
+msgid "Blog Sidebar"
+msgstr ""
+
+#: inc/customizer/customizer.php:184
+msgid "Blog listing style"
+msgstr ""
+
+#: inc/customizer/customizer.php:328
+msgid "Body font"
+msgstr ""
+
+#: inc/customizer/customizer.php:352
+msgid "Body line height (%)"
+msgstr ""
+
+#: inc/customizer/customizer.php:285
+msgid "Body text"
+msgstr ""
+
+#: inc/customizer/customizer.php:288
+msgid "Borders"
+msgstr ""
+
+#: inc/customizer/customizer.php:138
+msgid "Boxed"
+msgstr ""
+
+#: inc/blocks.php:72
+msgid "Build anything, beautifully"
+msgstr ""
+
+#: inc/template-tags.php:50
+msgid "By"
+msgstr ""
+
+#: inc/blocks.php:26
+msgid "Card"
+msgstr ""
+
+#: inc/template-tags.php:100
+msgid "Categories"
+msgstr ""
+
+#: inc/header-builder.php:99
+msgid "Centered logo, menu below"
+msgstr ""
+
+#: comments.php:56
+msgid "Comments are closed."
+msgstr ""
+
+#: inc/customizer/customizer.php:144
+msgid "Container width (px)"
+msgstr ""
+
+#: inc/customizer/customizer.php:145
+msgid "Content width (px)"
+msgstr ""
+
+#: template-parts/content-single.php:23
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: inc/footer-builder.php:117
+msgid "Copyright text"
+msgstr ""
+
+#: inc/customizer/customizer.php:248
+msgid "Default page layout"
+msgstr ""
+
+#: inc/customizer/customizer.php:228
+msgid "Excerpt length (words)"
+msgstr ""
+
+#: template-parts/content.php:16
+msgid "Featured"
+msgstr ""
+
+#: inc/footer-builder.php:198
+msgid "Footer"
+msgstr ""
+
+#: inc/setup.php:119
+msgid "Footer %d"
+msgstr ""
+
+#: inc/footer-builder.php:23
+msgid "Footer Builder"
+msgstr ""
+
+#: inc/setup.php:66
+msgid "Footer Menu"
+msgstr ""
+
+#: inc/footer-builder.php:81
+msgid "Footer background"
+msgstr ""
+
+#: inc/footer-builder.php:56
+msgid "Footer columns"
+msgstr ""
+
+#: inc/footer-builder.php:100
+msgid "Footer text color"
+msgstr ""
+
+#: inc/setup.php:121
+msgid "Footer widget column. Empty columns are hidden automatically."
+msgstr ""
+
+#: inc/customizer/customizer.php:137 inc/customizer/customizer.php:243
+msgid "Full width"
+msgstr ""
+
+#: inc/blocks.php:74
+msgid "Get started"
+msgstr ""
+
+#: inc/customizer/customizer.php:274
+msgid "Global Colors"
+msgstr ""
+
+#: inc/customizer/customizer.php:189
+msgid "Grid"
+msgstr ""
+
+#: inc/customizer/customizer.php:205
+msgid "Grid columns"
+msgstr ""
+
+#: inc/customizer/customizer.php:23
+msgid "Hanken Grotesk (default)"
+msgstr ""
+
+#: inc/header-builder.php:23
+msgid "Header Builder"
+msgstr ""
+
+#: inc/header-builder.php:59
+msgid "Header background"
+msgstr ""
+
+#: inc/header-builder.php:39
+msgid "Header layout"
+msgstr ""
+
+#: inc/customizer/customizer.php:329
+msgid "Heading font"
+msgstr ""
+
+#: inc/customizer/customizer.php:353
+msgid "Heading weight"
+msgstr ""
+
+#: inc/customizer/customizer.php:284
+msgid "Headings"
+msgstr ""
+
+#: template-parts/content-none.php:31
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps a search can help."
+msgstr ""
+
+#: inc/customizer/customizer.php:117
+msgid "Layout"
+msgstr ""
+
+#: inc/template-tags.php:75
+msgid "Leave a comment"
+msgstr ""
+
+#: inc/footer-builder.php:118
+msgid "Leave blank for the default site name and year."
+msgstr ""
+
+#: inc/customizer/customizer.php:241
+msgid "Left sidebar"
+msgstr ""
+
+#: inc/customizer/customizer.php:287
+msgid "Link hover"
+msgstr ""
+
+#: inc/customizer/customizer.php:286
+msgid "Links"
+msgstr ""
+
+#: inc/customizer/customizer.php:188
+msgid "List"
+msgstr ""
+
+#: inc/header-builder.php:100
+msgid "Logo & menu left"
+msgstr ""
+
+#: inc/header-builder.php:98
+msgid "Logo left, menu centered"
+msgstr ""
+
+#: inc/header-builder.php:97
+msgid "Logo left, menu right"
+msgstr ""
+
+#: inc/header-builder.php:101
+msgid "Logo right, menu left"
+msgstr ""
+
+#: inc/setup.php:101
+msgid "Main Sidebar"
+msgstr ""
+
+#: inc/header-builder.php:151
+msgid "Menu"
+msgstr ""
+
+#: inc/customizer/customizer.php:35
+msgid "Monospace"
+msgstr ""
+
+#: index.php:35 archive.php:34 comments.php:50 search.php:36 single.php:22
+msgid "Next"
+msgstr ""
+
+#: inc/customizer/customizer.php:242
+msgid "No sidebar"
+msgstr ""
+
+#: template-parts/content-none.php:11
+msgid "Nothing found"
+msgstr ""
+
+#: comments.php:22
+msgid "One comment"
+msgstr ""
+
+#: inc/blocks.php:61
+msgid "Open Frame"
+msgstr ""
+
+#: inc/customizer/customizer.php:108
+msgid "Open Frame Options"
+msgstr ""
+
+#: inc/blocks.php:68
+msgid "Open Frame hero"
+msgstr ""
+
+#: inc/customizer/customizer.php:289
+msgid "Page background"
+msgstr ""
+
+#: template-parts/content-single.php:31 template-parts/content-page.php:22
+msgid "Pages:"
+msgstr ""
+
+#: inc/template-tags.php:34
+msgid "Posted on"
+msgstr ""
+
+#: index.php:36
+msgid "Posts navigation"
+msgstr ""
+
+#: index.php:34 archive.php:33 comments.php:49 search.php:35 single.php:21
+msgid "Previous"
+msgstr ""
+
+#: inc/customizer/customizer.php:280 inc/header-builder.php:137 inc/header-builder.php:148
+msgid "Primary"
+msgstr ""
+
+#: inc/customizer/customizer.php:281
+msgid "Primary (hover)"
+msgstr ""
+
+#: inc/setup.php:64
+msgid "Primary Menu"
+msgstr ""
+
+#: template-parts/content.php:37
+msgid "Read more"
+msgstr ""
+
+#: template-parts/content-none.php:20
+msgid "Ready to publish your first post? <a href=\"%s\">Get started here</a>."
+msgstr ""
+
+#: inc/customizer/customizer.php:240
+msgid "Right sidebar"
+msgstr ""
+
+#: searchform.php:11
+msgid "Search for:"
+msgstr ""
+
+#: search.php:18
+msgid "Search results for: %s"
+msgstr ""
+
+#: inc/customizer/customizer.php:282
+msgid "Secondary"
+msgstr ""
+
+#: inc/setup.php:65
+msgid "Secondary Menu"
+msgstr ""
+
+#: inc/customizer/customizer.php:146
+msgid "Section spacing (px)"
+msgstr ""
+
+#: inc/customizer/customizer.php:31
+msgid "Serif"
+msgstr ""
+
+#: inc/blocks.php:42
+msgid "Shadow"
+msgstr ""
+
+#: inc/footer-builder.php:39
+msgid "Show footer widget area"
+msgstr ""
+
+#: inc/header-builder.php:68
+msgid "Show search in header"
+msgstr ""
+
+#: sidebar.php:14
+msgid "Sidebar"
+msgstr ""
+
+#: inc/customizer/customizer.php:247
+msgid "Single post layout"
+msgstr ""
+
+#: inc/customizer/customizer.php:133
+msgid "Site layout"
+msgstr ""
+
+#: header.php:20
+msgid "Skip to content"
+msgstr ""
+
+#: inc/blocks.php:34
+msgid "Soft"
+msgstr ""
+
+#: template-parts/content-none.php:28
+msgid "Sorry, nothing matched your search terms. Please try again with different keywords."
+msgstr ""
+
+#: inc/header-builder.php:66
+msgid "Sticky header"
+msgstr ""
+
+#: inc/class-open-frame-walker-nav-menu.php:33
+msgid "Submenu"
+msgstr ""
+
+#: inc/customizer/customizer.php:290
+msgid "Surfaces"
+msgstr ""
+
+#: inc/customizer/customizer.php:27
+msgid "System UI"
+msgstr ""
+
+#: inc/template-tags.php:109
+msgid "Tags"
+msgstr ""
+
+#: 404.php:17
+msgid "The page you are looking for may have moved or no longer exists. Try a search instead."
+msgstr ""
+
+#: 404.php:14
+msgid "This page could not be found"
+msgstr ""
+
+#: inc/header-builder.php:67
+msgid "Transparent header on front page"
+msgstr ""
+
+#: inc/customizer/customizer.php:317
+msgid "Typography"
+msgstr ""
+
+#: inc/template-tags.php:169
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: searchform.php:12
+msgctxt "placeholder"
+msgid "Search&hellip;"
+msgstr ""
+
+#: searchform.php:13
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
