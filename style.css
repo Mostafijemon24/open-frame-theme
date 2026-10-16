@@ -4,7 +4,7 @@ Theme URI:
 Author: Mostafij Emon
 Author URI: https://mostafijemon.live/
 Description: Open Frame is an original, lightweight, accessibility-first multipurpose WordPress theme. A token-driven design system, a comprehensive Customizer, header & footer builders, and clean template coverage make it a flexible foundation for business, blog, portfolio and shop sites. Works fully on its own; an optional free Starter Sites companion plugin adds demo imports.
-Version: 0.5.0
+Version: 0.6.0
 Requires at least: 6.4
 Tested up to: 6.7
 Requires PHP: 7.4
@@ -703,7 +703,6 @@ textarea { resize: vertical; min-height: 7rem; }
 		align-items: center;
 		justify-content: center;
 		gap: var(--of-space-2);
-		margin-inline-start: auto;
 		background: var(--of-primary-100);
 		color: var(--of-color-primary);
 		border: none;
@@ -711,19 +710,36 @@ textarea { resize: vertical; min-height: 7rem; }
 		padding: var(--of-space-3);
 		cursor: pointer;
 	}
-	.main-navigation { flex-basis: 100%; position: static; }
 
-	/* Collapsible panel with its own scroll so long menus never overflow. */
+	/* The header bar is the positioning context for the expanded menu panel. */
+	.site-header-inner { position: relative; }
+
+	/* Keep the navigation (and therefore the toggle) on the header row instead
+	   of forcing it onto a full-width second row. Its horizontal placement is
+	   inherited from the active header layout — e.g. logo-left-menu-right applies
+	   margin-inline-start:auto, pushing the toggle to the end — so the mobile
+	   header follows the saved Customizer configuration rather than a hardcoded
+	   side. Static positioning lets the panel below anchor to .site-header-inner. */
+	.main-navigation { position: static; }
+
+	/* The expanded menu is a full-width panel dropped below the header bar, so
+	   the toggle and logo never move when the menu opens or closes. */
 	.main-navigation > ul {
 		display: none;
+		position: absolute;
+		inset-inline: 0;
+		top: 100%;
+		z-index: 999;
 		flex-direction: column;
 		flex-wrap: nowrap;
 		align-items: stretch;
-		width: 100%;
-		margin-top: var(--of-space-3);
 		max-height: 70vh;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
+		padding: var(--of-space-3);
+		background: var(--of-color-surface);
+		border-top: 1px solid var(--of-color-border);
+		box-shadow: var(--of-shadow-lg);
 	}
 	.main-navigation.is-open > ul { display: flex; }
 

@@ -2,7 +2,13 @@
 
 Status legend: PASS · FAIL · BLOCKED · NOT VERIFIED · NOT APPLICABLE · TODO
 
-_Last updated: 2026-10-17 (release-candidate v0.5.0 — float-containment fix, WPCS-clean, GitHub published)_
+_Last updated: 2026-10-17 (release-candidate v0.6.0 — mobile header alignment follows Customizer layout; v0.5.0 float-containment fix, WPCS-clean, GitHub published)_
+
+## v0.6.0 audit results
+| Item | Status | Evidence |
+|---|---|---|
+| Mobile header alignment defect | PASS | Root cause: on `@media (max-width:1023px)` the nav used `flex-basis:100%` (wrapping to a full-width second row) and `.menu-toggle{margin-inline-start:auto}`, but auto-margins do not apply to an inline-flex child of a *block* `.main-navigation`, so the toggle rendered at the inline start regardless of layout (measured left:24 / top:76, own row). Fix: keep the nav on the header row (removed `flex-basis:100%`) so the existing `header-layout-*` rule positions it (e.g. `logo-left-menu-right` → `margin-inline-start:auto`), dropped the open menu as an absolute full-width panel anchored to `.site-header-inner`, and removed the ineffective toggle auto-margin. |
+| Mobile config-driven alignment | PASS | Browser DOM/CSSOM measured: `logo-left-menu-right` → logo left (24) + toggle right (edge 366/296 per width), same row; switched saved mod to `logo-right-menu-left`, reloaded → logo right (366) + toggle left (24); restored original. Verified 320/360/390/430/768 (toggle right, no overflow), menu open/close (toggle Δx 0, logo fixed), RTL (logo right/toggle left, mirrored), desktop 1024/1440 unchanged (toggle hidden, horizontal menu at inline end). |
 
 ## v0.5.0 audit results
 | Item | Status | Evidence |

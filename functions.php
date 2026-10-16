@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'OPEN_FRAME_VERSION', '0.5.0' );
+define( 'OPEN_FRAME_VERSION', '0.6.0' );
 define( 'OPEN_FRAME_DIR', get_template_directory() );
 define( 'OPEN_FRAME_URI', get_template_directory_uri() );
 

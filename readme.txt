@@ -4,7 +4,7 @@ Contributors: mostafijemon
 Requires at least: 6.4
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 0.5.0
+Stable tag: 0.6.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, portfolio, news, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, left-sidebar, right-sidebar, two-columns, theme-options, threaded-comments, translation-ready, rtl-language-support, sticky-post, block-styles, wide-blocks
@@ -56,6 +56,12 @@ Bundled resources:
 * JetBrains Mono — SIL Open Font License 1.1 — https://fonts.google.com/specimen/JetBrains+Mono
 
 == Changelog ==
+
+= 0.6.0 =
+* Fix: on mobile and tablet the menu toggle (hamburger) now follows the saved Customizer header layout instead of always sitting on the left. Previously the navigation wrapped to a full-width second row and the toggle's `margin-inline-start: auto` had no effect because its parent was not a flex container, so the toggle rendered at the inline start regardless of the configured layout.
+* Change: the collapsed navigation keeps the toggle inline on the header row; its horizontal placement is inherited from the active `header-layout-*` class (e.g. `logo-left-menu-right` aligns the toggle to the inline end), so the mobile header mirrors the desktop configuration across all header layouts and in RTL.
+* Change: the expanded mobile menu now opens as a full-width panel anchored below the header bar, so opening or closing the menu no longer shifts the logo or the toggle.
+* Verified in-browser at 320/360/390/430/768 (mobile/tablet) and 1024/1280/1440 (desktop), in both LTR and RTL, with the menu open and closed, and after switching the saved header layout: the logo and toggle positions track the Customizer configuration with no horizontal overflow.
 
 = 0.5.0 =
 * Fix: floated images (alignleft/alignright) and trailing thumbnails no longer stick out below the content card. `.entry-content`, `.entry-summary`, `.page-content` and `.comment-content` now establish a block formatting context (`display: flow-root`) so containers size to include their floats, without clipping full-bleed (`alignfull`) blocks.
